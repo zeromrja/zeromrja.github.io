@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        @font-face {
+            font-family: 'MinecraftFive';
+            src: url('MinecraftFive.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'MinecraftSeven';
+            src: url('MinecraftSeven.ttf') format('truetype');
+        }
+
+        body {
+            font-family: 'MinecraftFive', sans-serif;
+            text-align: center;
+            background-image: url('fondo.jpg'); /* Asegúrate de que esta ruta sea correcta */
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #00ff00; /* Color verde programador */
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-family: 'MinecraftSeven', sans-serif;
+            font-size: 3em;
+            margin: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .link-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .link-container a {
+            font-family: 'MinecraftFive', sans-serif;
+            font-size: 2em;
+            color: #fff;
+            text-decoration: none;
+            background-color: #55acee;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .link-container a:hover {
+            background-color: #0077cc;
+        }
+        
+        .link-container p {
+            font-family: 'MinecraftFive', sans-serif;
+            font-size: 1.5em;
+            color: #fff; /* Color verde programador */
+            margin-bottom: 10px; /* Espacio entre el texto y los enlaces */
+        }
+
+        .social-links {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejorar la legibilidad de los enlaces sociales */
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .social-link {
+            margin-right: 20px;
+        }
+
+        .network {
+            font-weight: bold;
+        }
+
+        .twitter {
+            color: #55acee; /* Azul para Twitter */
+        }
+
+        .youtube {
+            color: #FF0000; /* Rojo para YouTube */
+        }
+
+        .instagram {
+            color: #FED000; /* Amarillo para Instagram */
+        }
+        .social-icon {
+            color: inherit;
+            text-decoration: none;
+        }
+        .social-icon:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenido a Mi Página</h1>
+    <div class="link-container">
+        <p>Skin Packs:</p>
+        <a href="SkinPackConan">Descargar Skin Pack de Detective Conan</a>
+    </div>
+    <div class="social-links">
+        <div class="social-link">
+            <p><span class="network twitter">Twitter:</span> <a href="https://twitter.com/zeromrja" class="social-icon" target="_blank">@zeromrja</a></p>
+        </div>
+        <div class="social-link">
+            <p><span class="network youtube">YouTube:</span> <a href="https://youtube.com/@zeromrja" class="social-icon" target="_blank">@zeromrja</a></p>
+        </div>
+        <div class="social-link">
+            <p><span class="network instagram">Instagram:</span> <a href="https://instagram.com/zeromrja" class="social-icon" target="_blank">@zeromrja</a></p>
+        </div>
+    </div>
+</body>
+</html>
