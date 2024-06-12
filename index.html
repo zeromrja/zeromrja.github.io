@@ -20,19 +20,17 @@
         body {
             font-family: 'MinecraftFive', sans-serif;
             text-align: center;
-            background-image: url('fondo.jpg'); /* Asegúrate de que esta ruta sea correcta */
+            background-image: url('fondo.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-color: #000;
-            color: #00ff00; /* Color verde programador */
+            color: #00ff00;
             height: 100vh;
             margin: 0;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            position: relative; /* Asegura que el contenido se ajuste bien */
-            padding-bottom: 100px; /* Agrega espacio para el social-links */
         }
 
         h1 {
@@ -61,10 +59,11 @@
         .link-container p {
             font-family: 'MinecraftFive', sans-serif;
             font-size: 1.5em;
-            color: #fff; /* Color verde programador */
-            margin-bottom: 10px; /* Espacio entre el texto y los enlaces */
-            text-align: center; /* Centra el texto horizontalmente */
-            grid-column: span 3; /* Hace que el párrafo ocupe las tres columnas */
+            color: #fff;
+            margin-bottom: 10px;
+            text-align: center;
+            grid-column: span 3;
+            background: rgba(0, 0, 0, 0.5);
         }
 
         .link-container a {
@@ -82,19 +81,12 @@
             background-color: #0077cc;
         }
 
-        .link-container .link {
-            display: grid;
-            align-items: center;
-            justify-items: center;
-            grid-column: span 3;
-        }
-
         .social-links {
             position: fixed;
             bottom: 0;
             left: 0;
             width: 100%;
-            background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejorar la legibilidad de los enlaces sociales */
+            background-color: rgba(0, 0, 0, 0.5);
             padding: 20px;
             box-sizing: border-box;
             text-align: center;
@@ -111,15 +103,15 @@
         }
 
         .twitter {
-            color: #55acee; /* Azul para Twitter */
+            color: #55acee;
         }
 
         .youtube {
-            color: #FF0000; /* Rojo para YouTube */
+            color: #FF0000;
         }
 
         .instagram {
-            color: #FED000; /* Amarillo para Instagram */
+            color: #FED000;
         }
 
         .social-icon {
@@ -134,7 +126,6 @@
         @media only screen and (max-width: 600px) {
             body {
                 padding: 10px;
-                padding-bottom: 150px; /* Asegura espacio suficiente para social-links en móviles */
             }
 
             h1 {
@@ -157,10 +148,6 @@
                 margin: 5px 0;
             }
 
-            .link-container .link {
-                grid-column: 1 / -1;
-            }
-
             .social-links {
                 position: static;
                 margin-top: 20px;
@@ -178,15 +165,13 @@
     </style>
 </head>
 <body>
-    <h1>Bienvenido a Mi Página</h1>
+    <h1>¡Hey! Gracias por visitarme</h1>
     <div class="link-container">
         <p>Skin Packs:</p>
+    </div>
+    <div class="link-container">
         <a href="SkinPackConan">Detective Conan</a>
         <a href="SkinPackTransylvania">Hotel Transylvania</a>
-        <a href="SkinPackConan">Detective Conan</a>
-        <a href="SkinPackTransylvania">Hotel Transylvania</a>
-        <a href="SkinPackConan">Detective Conan</a>
-        <a href="SkinPackTransylvania" class="link">Hotel Transylvania</a>
     </div>
     <div class="social-links">
         <div class="social-link">
@@ -207,7 +192,7 @@
 
             document.querySelectorAll('a').forEach(link => {
                 link.addEventListener('click', (event) => {
-                    event.preventDefault(); // Evita que el enlace se abra inmediatamente
+                    event.preventDefault();
                     const href = link.getAttribute('href');
                     
                     clickSound.play();
