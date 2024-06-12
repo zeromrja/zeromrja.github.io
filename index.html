@@ -23,6 +23,7 @@
             background-image: url('fondo.jpg'); /* Asegúrate de que esta ruta sea correcta */
             background-size: cover;
             background-repeat: no-repeat;
+            background-color: #000;
             color: #00ff00; /* Color verde programador */
             height: 100vh;
             margin: 0;
@@ -30,6 +31,8 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            position: relative; /* Asegura que el contenido se ajuste bien */
+            padding-bottom: 100px; /* Agrega espacio para el social-links */
         }
 
         h1 {
@@ -47,9 +50,21 @@
         }
 
         .link-container {
-            display: flex;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
             gap: 20px;
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .link-container p {
+            font-family: 'MinecraftFive', sans-serif;
+            font-size: 1.5em;
+            color: #fff; /* Color verde programador */
+            margin-bottom: 10px; /* Espacio entre el texto y los enlaces */
+            text-align: center; /* Centra el texto horizontalmente */
+            grid-column: span 3; /* Hace que el párrafo ocupe las tres columnas */
         }
 
         .link-container a {
@@ -60,18 +75,18 @@
             background-color: #55acee;
             padding: 10px 20px;
             border-radius: 5px;
-            margin: 10px 0;
+            text-align: center;
         }
 
         .link-container a:hover {
             background-color: #0077cc;
         }
-        
-        .link-container p {
-            font-family: 'MinecraftFive', sans-serif;
-            font-size: 1.5em;
-            color: #fff; /* Color verde programador */
-            margin-bottom: 10px; /* Espacio entre el texto y los enlaces */
+
+        .link-container .link {
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            grid-column: span 3;
         }
 
         .social-links {
@@ -106,53 +121,60 @@
         .instagram {
             color: #FED000; /* Amarillo para Instagram */
         }
+
         .social-icon {
             color: inherit;
             text-decoration: none;
         }
+
         .social-icon:hover {
             text-decoration: underline;
         }
+
         @media only screen and (max-width: 600px) {
-    body {
-        padding: 10px; /* Reducir el relleno alrededor de la página */
-    }
+            body {
+                padding: 10px;
+                padding-bottom: 150px; /* Asegura espacio suficiente para social-links en móviles */
+            }
 
-    h1 {
-        font-size: 2em; /* Reducir el tamaño del título para dispositivos móviles */
-        margin: 10px; /* Reducir el margen del título */
-    }
+            h1 {
+                font-size: 2em;
+                margin: 10px;
+            }
 
-    p {
-        font-size: 14px; /* Reducir el tamaño del texto para dispositivos móviles */
-        margin-bottom: 10px; /* Reducir el espacio entre los párrafos */
-    }
+            p {
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
 
-    .link-container {
-        flex-direction: column; /* Cambiar a una disposición de columna para dispositivos móviles */
-        align-items: center; /* Centrar los enlaces en dispositivos móviles */
-    }
+            .link-container {
+                grid-template-columns: 1fr;
+            }
 
-    .link-container a {
-        font-size: 1.5em; /* Reducir el tamaño de los enlaces para dispositivos móviles */
-        padding: 8px 16px; /* Reducir el relleno de los enlaces */
-        margin: 5px 0; /* Reducir el margen de los enlaces */
-    }
+            .link-container a {
+                font-size: 1.5em;
+                padding: 8px 16px;
+                margin: 5px 0;
+            }
 
-    .social-links {
-        position: static; /* Cambiar a posicionamiento estático para dispositivos móviles */
-        margin-top: 20px; /* Añadir margen superior para separar los enlaces sociales */
-        padding: 10px; /* Reducir el relleno de los enlaces sociales */
-    }
+            .link-container .link {
+                grid-column: 1 / -1;
+            }
 
-    .social-link {
-        margin-right: 10px; /* Reducir el margen entre los enlaces sociales */
-    }
+            .social-links {
+                position: static;
+                margin-top: 20px;
+                padding: 10px;
+            }
 
-    .social-link p {
-        font-size: 1em; /* Reducir el tamaño del texto de los enlaces sociales */
-    }
-}
+            .social-link {
+                margin-right: 10px;
+            }
+
+            .social-link p {
+                font-size: 1em;
+            }
+        }
     </style>
 </head>
 <body>
@@ -161,6 +183,10 @@
         <p>Skin Packs:</p>
         <a href="SkinPackConan">Detective Conan</a>
         <a href="SkinPackTransylvania">Hotel Transylvania</a>
+        <a href="SkinPackConan">Detective Conan</a>
+        <a href="SkinPackTransylvania">Hotel Transylvania</a>
+        <a href="SkinPackConan">Detective Conan</a>
+        <a href="SkinPackTransylvania" class="link">Hotel Transylvania</a>
     </div>
     <div class="social-links">
         <div class="social-link">
