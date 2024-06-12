@@ -140,8 +140,15 @@
             const clickSound = document.getElementById('clickSound');
 
             document.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
+                link.addEventListener('click', (event) => {
+                    event.preventDefault(); // Evita que el enlace se abra inmediatamente
+                    const href = link.getAttribute('href');
+                    
                     clickSound.play();
+
+                    clickSound.onended = function() {
+                        window.location.href = href;
+                    };
                 });
             });
         });
