@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.getElementById('title').textContent = translations.title;
                 document.getElementById('text').textContent = translations.text;
                 document.getElementById('download').textContent = translations.download;
+                document.getElementById('models').textContent = translations.models;
                 document.getElementById('twitter').textContent = translations.twitter;
                 document.getElementById('youtube').textContent = translations.youtube;
                 document.getElementById('instagram').textContent = translations.instagram;
