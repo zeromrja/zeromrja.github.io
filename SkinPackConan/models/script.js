@@ -8,7 +8,6 @@ document.body.appendChild(renderer.domElement);
 
 const loader = new THREE.GLTFLoader();
 let currentModel = null;
-let light = new THREE.DirectionalLight(0xffffff, 0.75);
 
 const textureLoader = new THREE.TextureLoader();
 const backgroundTexture = textureLoader.load('fondo.png');
@@ -23,12 +22,15 @@ function loadModel(modelPath) {
         function (gltf) {
             console.log('Model loaded successfully');
 
+            // Configura todos los materiales del modelo para usar MeshBasicMaterial
             gltf.scene.traverse((child) => {
                 if (child.isMesh) {
+                    const basicMaterial = new THREE.MeshBasicMaterial();
+                    basicMaterial.copy(child.material); // Copia las propiedades del material original
 
-                    if (child.material.map) {
-                        child.material.transparent = true;
-                    }
+                    // Asigna el nuevo material MeshBasicMaterial
+                    child.material = basicMaterial;
+
                 }
             });
 
@@ -41,10 +43,6 @@ function loadModel(modelPath) {
 
             camera.position.set(center.x, center.y, center.z - size.z * 6);
             camera.lookAt(center);
-
-            light.position.copy(camera.position);
-            light.target = gltf.scene;
-            scene.add(light);
 
             animate();
         },
@@ -74,9 +72,6 @@ window.addEventListener('resize', () => {
 function animate() {
     requestAnimationFrame(animate);
     controls.update();
-
-    light.position.copy(camera.position);
-    light.lookAt(scene.position);
 
     renderer.render(scene, camera);
 }
