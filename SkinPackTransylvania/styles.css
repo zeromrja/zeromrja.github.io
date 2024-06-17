@@ -197,6 +197,10 @@ p {
     .social-link p {
         font-size: 1em; /* Reducir el tamaño del texto de los enlaces sociales */
     }
+
+    .models-link {
+        margin-top: 10px; /* Añadir margen superior para separar el enlace de modelos */
+    }
 }
 .custom-select-container {
     position: relative;
