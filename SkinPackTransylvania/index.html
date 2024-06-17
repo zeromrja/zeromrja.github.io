@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title"></title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-storage.js"></script>
+</head>
+<body>
+    <header>
+        <h1 id="header"></h1>
+        <a href="javascript:history.back()" class="back-link" id="backBtn"></a>
+    </header>
+    <div class="container">
+        <p id="text"></p>
+        <a href="https://firebasestorage.googleapis.com/v0/b/contador-de-descarga-mcconan.appspot.com/o/Detective%20Conan%20SkinPack.zip?alt=media&token=7c896806-b573-44ad-aef8-38f9c009c927" class="download-link" id="download"></a>
+    </div>
+    <div class="social-links">
+        <div class="social-link">
+            <p><span class="network twitter" id="twitter"></span> <a href="https://twitter.com/zeromrja" class="social-icon" target="_blank">@zeromrja</a></p>
+        </div>
+        <div class="social-link">
+            <p><span class="network youtube" id="youtube"></span> <a href="https://youtube.com/@zeromrja" class="social-icon" target="_blank">@zeromrja</a></p>
+        </div>
+        <div class="social-link">
+            <p><span class="network instagram" id="instagram"></span> <a href="https://instagram.com/zeromrja" class="social-icon" target="_blank">@zeromrja</a></p>
+        </div>
+    </div>
+    <div class="custom-select-container">
+        <select id="languageSelect">
+            <option value="es">Español</option>
+            <option value="en">English</option>
+        </select>
+        <div class="custom-arrow"></div>
+    </div>
+    <script src="idioma.js"></script>
+    
+    <audio id="clickSound" src="snes_pop-7a6d3.ogg"></audio>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const clickSound = document.getElementById('clickSound');
+
+            document.querySelectorAll('a').forEach(link => {
+                if (link.id !== 'backBtn') {
+                    link.addEventListener('click', () => {
+                        clickSound.play();
+                    });
+                }
+            });
+        });
+    </script>    
+</body>
+</html>
