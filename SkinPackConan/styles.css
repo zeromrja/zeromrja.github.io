@@ -31,14 +31,6 @@ header {
     z-index: 1;
 }
 
-.container {
-    flex-grow: 1; /* Hacer que el contenedor principal ocupe el espacio disponible */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
 .container p {
     max-width: 80%; /* Limitar el ancho del párrafo para que no se extienda demasiado */
     background-color: rgba(0, 0, 0, 0.5);
@@ -157,6 +149,13 @@ p {
     text-decoration: underline;
 }
 
+.youtube-video {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
 /* Estilos para dispositivos móviles */
 @media only screen and (max-width: 600px) {
     body {
@@ -196,6 +195,16 @@ p {
 
     .social-link p {
         font-size: 1em; /* Reducir el tamaño del texto de los enlaces sociales */
+    }
+
+    .models-link {
+        margin-top: 10px; /* Añadir margen superior para separar el enlace de modelos */
+    }
+
+    .youtube-video {
+        position: static; /* Cambiar a posicionamiento estático para dispositivos móviles */
+        display: block; /* Mostrar en pantallas pequeñas */
+        margin-top: 20px; /* Añadir margen superior para separar el video */
     }
 }
 .custom-select-container {
