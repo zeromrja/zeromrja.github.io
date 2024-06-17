@@ -184,3 +184,55 @@ p {
         font-size: 1em; /* Reducir el tamaño del texto de los enlaces sociales */
     }
 }
+.custom-select-container {
+    position: relative;
+    width: 200px;
+    height: 64px;
+    background: url('globe.png') no-repeat left center / contain;
+    background-color: #000;
+    border: 2px solid #00ff00;
+    border-radius: 5px;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    flex: 1;
+    height: 100%;
+    padding: 10px;
+    font-family: 'Minecraft Five', sans-serif;
+    font-size: 1.5em;
+    color: transparent;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+select:focus {
+    border-color: #55acee;
+}
+
+.select-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    font-size: 1.2em;
+    color: #00ff00;
+}
+
+.custom-arrow {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    width: 24px;
+    height: 24px;
+    background: url('arrow.png') no-repeat center center / contain;
+}
