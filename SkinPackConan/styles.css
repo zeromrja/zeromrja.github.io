@@ -149,13 +149,6 @@ p {
     text-decoration: underline;
 }
 
-.youtube-video {
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-}
-
 /* Estilos para dispositivos móviles */
 @media only screen and (max-width: 600px) {
     body {
@@ -199,12 +192,6 @@ p {
 
     .models-link {
         margin-top: 10px; /* Añadir margen superior para separar el enlace de modelos */
-    }
-
-    .youtube-video {
-        position: static; /* Cambiar a posicionamiento estático para dispositivos móviles */
-        display: block; /* Mostrar en pantallas pequeñas */
-        margin-top: 20px; /* Añadir margen superior para separar el video */
     }
 }
 .custom-select-container {
