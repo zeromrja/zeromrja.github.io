@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Models</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            color: white; /* Cambia el color del texto a blanco */
+        }
+        canvas {
+            display: block;
+        }
+        .select-container {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 1;
+            background-color: rgba(255, 255, 255, 0.8); /* Fondo del contenedor de selección */
+            padding: 10px;
+            border-radius: 5px;
+            color: black; /* Color del texto dentro del contenedor (opcional, para contraste) */
+        }
+        select {
+            font-size: 16px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="select-container">
+        <label for="modelSelect">Selecciona un modelo:</label>
+        <select id="modelSelect">
+            <option value="model1.gltf">Conan Edogawa</option>
+            <option value="model2.gltf">Shinichi Kudo</option>
+            <option value="model3.gltf">Ran Mouri</option>
+            <option value="model4.gltf">Ai Haibara</option>
+            <option value="model5.gltf">Kogoro Mouri</option>
+            <option value="model6.gltf">Gin</option>
+            <option value="model7.gltf">Heiji Hatori</option>
+            <option value="model8.gltf">Suichi Akai</option>
+            <option value="model9.gltf">Bourbon</option>
+            <option value="model10.gltf">Kaito Kid</option>
+        </select>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
