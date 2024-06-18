@@ -1,4 +1,3 @@
-// Configura la escena, la cámara y el renderizador
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 const renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -8,6 +7,7 @@ document.body.appendChild(renderer.domElement);
 
 const loader = new THREE.GLTFLoader();
 let currentModel = null;
+let isRotating = true; // Variable para controlar la animación de giro
 
 const textureLoader = new THREE.TextureLoader();
 const backgroundTexture = textureLoader.load('fondo.png');
@@ -30,7 +30,6 @@ function loadModel(modelPath) {
 
                     // Asigna el nuevo material MeshBasicMaterial
                     child.material = basicMaterial;
-
                 }
             });
 
@@ -44,7 +43,7 @@ function loadModel(modelPath) {
             camera.position.set(center.x, center.y, center.z - size.z * 6);
             camera.lookAt(center);
 
-            animate();
+            animate(); // Inicia la animación de rotación
         },
         undefined,
         function (error) {
@@ -69,14 +68,25 @@ window.addEventListener('resize', () => {
     renderer.setSize(window.innerWidth, window.innerHeight);
 });
 
+// Event listener para detectar interacción con el ratón o trackpad
+renderer.domElement.addEventListener('pointerdown', () => {
+    isRotating = false; // Se ha hecho click o se está arrastrando con el ratón o trackpad
+});
+
+renderer.domElement.addEventListener('mousedown', () => {
+    isRotating = false; // Se ha hecho click o se está arrastrando con el ratón o trackpad
+});
+
 function animate() {
     requestAnimationFrame(animate);
-    controls.update();
 
-    renderer.render(scene, camera);
+    if (isRotating && currentModel) {
+        currentModel.rotation.y += 0.01; // Ajusta la velocidad de rotación según necesites
+    }
+
+    controls.update(); // Actualiza los controles de órbita
+    renderer.render(scene, camera); // Renderiza la escena
 }
-
-animate();
 
 document.getElementById('modelSelect').addEventListener('change', (event) => {
     const selectedModel = event.target.value;
