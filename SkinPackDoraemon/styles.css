@@ -157,51 +157,6 @@ p {
     text-decoration: underline;
 }
 
-/* Estilos para dispositivos móviles */
-@media only screen and (max-width: 600px) {
-    body {
-        padding: 10px; /* Reducir el relleno alrededor de la página */
-    }
-
-    h1 {
-        font-size: 2em; /* Reducir el tamaño del título para dispositivos móviles */
-        margin: 10px; /* Reducir el margen del título */
-    }
-
-    p {
-        font-size: 14px; /* Reducir el tamaño del texto para dispositivos móviles */
-        margin-bottom: 10px; /* Reducir el espacio entre los párrafos */
-    }
-
-    .link-container {
-        flex-direction: column; /* Cambiar a una disposición de columna para dispositivos móviles */
-        align-items: center; /* Centrar los enlaces en dispositivos móviles */
-    }
-
-    .link-container a {
-        font-size: 1.5em; /* Reducir el tamaño de los enlaces para dispositivos móviles */
-        padding: 8px 16px; /* Reducir el relleno de los enlaces */
-        margin: 5px 0; /* Reducir el margen de los enlaces */
-    }
-
-    .social-links {
-        position: static; /* Cambiar a posicionamiento estático para dispositivos móviles */
-        margin-top: 20px; /* Añadir margen superior para separar los enlaces sociales */
-        padding: 10px; /* Reducir el relleno de los enlaces sociales */
-    }
-
-    .social-link {
-        margin-right: 10px; /* Reducir el margen entre los enlaces sociales */
-    }
-
-    .social-link p {
-        font-size: 1em; /* Reducir el tamaño del texto de los enlaces sociales */
-    }
-
-    .models-link {
-        margin-top: 10px; /* Añadir margen superior para separar el enlace de modelos */
-    }
-}
 .custom-select-container {
     position: relative;
     width: 200px;
@@ -253,4 +208,100 @@ select:focus {
     width: 24px;
     height: 24px;
     background: url('arrow.png') no-repeat center center / contain;
+}
+
+.stickers-container {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.stickers-container h2 {
+    color: #7fff00;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.sticker-link {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.sticker-link.green {
+    background-color: #00ff00; /* Verde */
+}
+
+.sticker-link.green:hover {
+    background-color: #00cc00;
+}
+
+.sticker-link.blue {
+    background-color: #0000ff; /* Azul oscuro */
+}
+
+.sticker-link.blue:hover {
+    background-color: #0000cc;
+}
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+    body {
+        padding: 10px; /* Reducir el relleno alrededor de la página */
+    }
+
+    h1 {
+        font-size: 2em; /* Reducir el tamaño del título para dispositivos móviles */
+        margin: 10px; /* Reducir el margen del título */
+    }
+
+    p {
+        font-size: 14px; /* Reducir el tamaño del texto para dispositivos móviles */
+        margin-bottom: 10px; /* Reducir el espacio entre los párrafos */
+    }
+
+    .link-container {
+        flex-direction: column; /* Cambiar a una disposición de columna para dispositivos móviles */
+        align-items: center; /* Centrar los enlaces en dispositivos móviles */
+    }
+
+    .link-container a {
+        font-size: 1.5em; /* Reducir el tamaño de los enlaces para dispositivos móviles */
+        padding: 8px 16px; /* Reducir el relleno de los enlaces */
+        margin: 5px 0; /* Reducir el margen de los enlaces */
+    }
+
+    .social-links {
+        position: static; /* Cambiar a posicionamiento estático para dispositivos móviles */
+        margin-top: 20px; /* Añadir margen superior para separar los enlaces sociales */
+        padding: 10px; /* Reducir el relleno de los enlaces sociales */
+    }
+
+    .social-link {
+        margin-right: 10px; /* Reducir el margen entre los enlaces sociales */
+    }
+
+    .social-link p {
+        font-size: 1em; /* Reducir el tamaño del texto de los enlaces sociales */
+    }
+
+    .models-link {
+        margin-top: 10px; /* Añadir margen superior para separar el enlace de modelos */
+    }
+
+    .stickers-container {
+        position: static;
+        margin-top: 20px;
+        transform: none;
+    }
 }
