@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Load selected language or default to Spanish
-    const savedLanguage = localStorage.getItem('selectedLanguage') || 'es';
+    const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
     languageSelect.value = savedLanguage;
     loadTranslations(savedLanguage);
 });
