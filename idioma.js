@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.getElementById('welcome').textContent = translations.welcome;
                 document.getElementById('skinPacks').textContent = translations.skinPacks;
                 document.getElementById('detectiveConan').textContent = translations.detectiveConan;
+                document.getElementById('doraemon').textContent = translations.doraemon;
                 document.getElementById('hotelTransylvania').textContent = translations.hotelTransylvania;
                 document.getElementById('twitter').textContent = translations.twitter;
                 document.getElementById('youtube').textContent = translations.youtube;
