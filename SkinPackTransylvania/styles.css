@@ -146,8 +146,7 @@ p {
 
 .models-link {
     display: block;
-    margin-top: 10px;
-    font-size: 16px;
+    font-size: 18px;
     text-decoration: none;
     color: #ff0000; /* Color del enlace */
     background-color: rgba(0, 0, 0, 0.5);
