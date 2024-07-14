@@ -39,6 +39,14 @@ header {
     flex-direction: column;
 }
 
+.container i {
+    max-width: 80%; /* Limitar el ancho del párrafo para que no se extienda demasiado */
+    background-color: rgba(0, 0, 0, 0.5);
+    color:#ffffff;
+    font-size: 25px;
+    margin: 6px;
+}
+
 .container p {
     max-width: 80%; /* Limitar el ancho del párrafo para que no se extienda demasiado */
     background-color: rgba(0, 0, 0, 0.5);
@@ -49,14 +57,6 @@ header {
     padding: 20px;
 }
 
-.container {
-    flex-grow: 1; /* Hacer que el contenedor principal ocupe el espacio disponible */
-    display: flex;
-    justify-content: flex-start;
-    align-items: center; /* Alinear el contenido al inicio del contenedor */
-    flex-direction: column;
-}
-
 h1 {
     font-family: 'Minecraft Seven', sans-serif;
     font-size: 36px;
@@ -65,7 +65,7 @@ h1 {
 }
 
 p {
-    font-size: 18px;
+    font-size: 25px;
     margin-bottom: 20px;
     line-height: 1.5;
 }
@@ -146,8 +146,7 @@ p {
 
 .models-link {
     display: block;
-    margin-top: 10px;
-    font-size: 16px;
+    font-size: 18px;
     text-decoration: none;
     color: #ff0000; /* Color del enlace */
     background-color: rgba(0, 0, 0, 0.5);
@@ -212,7 +211,7 @@ select:focus {
 
 .stickers-container {
     position: absolute;
-    top: 50%;
+    top: 70%;
     right: 20px;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
@@ -234,24 +233,39 @@ select:focus {
     text-decoration: none;
     border-radius: 5px;
     font-size: 16px;
-    color: #fff;
     transition: background-color 0.3s ease;
 }
 
 .sticker-link.green {
     background-color: #00ff00; /* Verde */
+    color: #000;
 }
 
 .sticker-link.green:hover {
     background-color: #00cc00;
+    color: #fff;
 }
 
 .sticker-link.blue {
     background-color: #0000ff; /* Azul oscuro */
+    color: #fff;
 }
 
 .sticker-link.blue:hover {
     background-color: #0000cc;
+    color: #858585;
+}
+
+.youtube-embed-container{
+    position: absolute;
+    top: 70%;
+    left: 20px;
+    transform: translateY(-50%);
+}
+.youtube-embed-container h2{
+    color: #e9f412;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
 /* Estilos para dispositivos móviles */
@@ -300,6 +314,11 @@ select:focus {
     }
 
     .stickers-container {
+        position: static;
+        margin-top: 20px;
+        transform: none;
+    }
+    .youtube-embed-container {
         position: static;
         margin-top: 20px;
         transform: none;
