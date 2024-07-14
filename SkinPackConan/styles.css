@@ -34,7 +34,7 @@ header {
 .container {
     flex-grow: 1; /* Hacer que el contenedor principal ocupe el espacio disponible */
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center; /* Alinear el contenido al inicio del contenedor */
     flex-direction: column;
 }
