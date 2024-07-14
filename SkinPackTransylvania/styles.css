@@ -44,17 +44,17 @@ header {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+.container i {
+    max-width: 80%; /* Limitar el ancho del párrafo para que no se extienda demasiado */
+    background-color: rgba(0, 0, 0, 0.5);
+    color:#ffffff;
+    font-size: 25px;
+    margin: 6px;
+}
+
 .social-links {
     background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejorar la legibilidad de los enlaces sociales */
     padding: 20px;
-}
-
-.container {
-    flex-grow: 1; /* Hacer que el contenedor principal ocupe el espacio disponible */
-    display: flex;
-    justify-content: flex-start;
-    align-items: center; /* Alinear el contenido al inicio del contenedor */
-    flex-direction: column;
 }
 
 h1 {
@@ -65,7 +65,7 @@ h1 {
 }
 
 p {
-    font-size: 18px;
+    font-size: 25px;
     margin-bottom: 20px;
     line-height: 1.5;
 }
@@ -157,51 +157,6 @@ p {
     text-decoration: underline;
 }
 
-/* Estilos para dispositivos móviles */
-@media only screen and (max-width: 600px) {
-    body {
-        padding: 10px; /* Reducir el relleno alrededor de la página */
-    }
-
-    h1 {
-        font-size: 2em; /* Reducir el tamaño del título para dispositivos móviles */
-        margin: 10px; /* Reducir el margen del título */
-    }
-
-    p {
-        font-size: 14px; /* Reducir el tamaño del texto para dispositivos móviles */
-        margin-bottom: 10px; /* Reducir el espacio entre los párrafos */
-    }
-
-    .link-container {
-        flex-direction: column; /* Cambiar a una disposición de columna para dispositivos móviles */
-        align-items: center; /* Centrar los enlaces en dispositivos móviles */
-    }
-
-    .link-container a {
-        font-size: 1.5em; /* Reducir el tamaño de los enlaces para dispositivos móviles */
-        padding: 8px 16px; /* Reducir el relleno de los enlaces */
-        margin: 5px 0; /* Reducir el margen de los enlaces */
-    }
-
-    .social-links {
-        position: static; /* Cambiar a posicionamiento estático para dispositivos móviles */
-        margin-top: 20px; /* Añadir margen superior para separar los enlaces sociales */
-        padding: 10px; /* Reducir el relleno de los enlaces sociales */
-    }
-
-    .social-link {
-        margin-right: 10px; /* Reducir el margen entre los enlaces sociales */
-    }
-
-    .social-link p {
-        font-size: 1em; /* Reducir el tamaño del texto de los enlaces sociales */
-    }
-
-    .models-link {
-        margin-top: 10px; /* Añadir margen superior para separar el enlace de modelos */
-    }
-}
 .custom-select-container {
     position: relative;
     width: 200px;
@@ -253,4 +208,68 @@ select:focus {
     width: 24px;
     height: 24px;
     background: url('arrow.png') no-repeat center center / contain;
+}
+
+.youtube-embed-container{
+    position: absolute;
+    top: 70%;
+    left: 20px;
+    transform: translateY(-50%);
+}
+.youtube-embed-container h2{
+    color: #e9f412;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+    body {
+        padding: 10px; /* Reducir el relleno alrededor de la página */
+    }
+
+    h1 {
+        font-size: 2em; /* Reducir el tamaño del título para dispositivos móviles */
+        margin: 10px; /* Reducir el margen del título */
+    }
+
+    p {
+        font-size: 14px; /* Reducir el tamaño del texto para dispositivos móviles */
+        margin-bottom: 10px; /* Reducir el espacio entre los párrafos */
+    }
+
+    .link-container {
+        flex-direction: column; /* Cambiar a una disposición de columna para dispositivos móviles */
+        align-items: center; /* Centrar los enlaces en dispositivos móviles */
+    }
+
+    .link-container a {
+        font-size: 1.5em; /* Reducir el tamaño de los enlaces para dispositivos móviles */
+        padding: 8px 16px; /* Reducir el relleno de los enlaces */
+        margin: 5px 0; /* Reducir el margen de los enlaces */
+    }
+
+    .social-links {
+        position: static; /* Cambiar a posicionamiento estático para dispositivos móviles */
+        margin-top: 20px; /* Añadir margen superior para separar los enlaces sociales */
+        padding: 10px; /* Reducir el relleno de los enlaces sociales */
+    }
+
+    .social-link {
+        margin-right: 10px; /* Reducir el margen entre los enlaces sociales */
+    }
+
+    .social-link p {
+        font-size: 1em; /* Reducir el tamaño del texto de los enlaces sociales */
+    }
+
+    .models-link {
+        margin-top: 10px; /* Añadir margen superior para separar el enlace de modelos */
+    }
+
+    .youtube-embed-container {
+        position: static;
+        margin-top: 20px;
+        transform: none;
+    }
 }
