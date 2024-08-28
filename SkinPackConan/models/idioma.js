@@ -12,14 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         fetch(`${language}.json`)
             .then(response => response.json())
             .then(translations => {
-                document.getElementById('title').textContent = translations.title;
-                document.getElementById('text').textContent = translations.text;
-                document.getElementById('download').textContent = translations.download;
-                document.getElementById('models').textContent = translations.models;
-                document.getElementById('twitter').textContent = translations.twitter;
-                document.getElementById('youtube').textContent = translations.youtube;
-                document.getElementById('instagram').textContent = translations.instagram;
-                document.getElementById('backBtn').textContent = translations.backBtn;
+                document.getElementById('select').textContent = translations.select;
             })
             .catch(error => console.error('Error loading translations:', error));
     }
