@@ -1,13 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const languageSelect = document.getElementById('languageSelect');
-    languageSelect.addEventListener('change', changeLanguage);
-
-    function changeLanguage() {
-        const selectedLanguage = languageSelect.value;
-        localStorage.setItem('selectedLanguage', selectedLanguage);
-        loadTranslations(selectedLanguage);
-    }
-
     function loadTranslations(language) {
         fetch(`${language}.json`)
             .then(response => response.json())
@@ -17,8 +8,11 @@ document.addEventListener('DOMContentLoaded', function() {
             .catch(error => console.error('Error loading translations:', error));
     }
 
-    // Load selected language or default to Spanish
-    const savedLanguage = localStorage.getItem('selectedLanguage') || 'es';
-    languageSelect.value = savedLanguage;
-    loadTranslations(savedLanguage);
+    // Detectar el idioma del navegador
+    const browserLanguage = navigator.language.slice(0, 2); // Ejemplo: 'es', 'en'
+    const supportedLanguages = ['en', 'es']; // Idiomas soportados
+
+    // Cargar el idioma si está soportado, sino por defecto 'en'
+    const selectedLanguage = supportedLanguages.includes(browserLanguage) ? browserLanguage : 'en';
+    loadTranslations(selectedLanguage);
 });
