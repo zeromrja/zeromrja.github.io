@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.getElementById('doraemon').textContent = translations.doraemon;
                 document.getElementById('hotelTransylvania').textContent = translations.hotelTransylvania;
                 document.getElementById('evangelion').textContent = translations.evangelion;
+                document.getElementById('blackHole').textContent = translations.blackHole;
                 document.getElementById('twitter').textContent = translations.twitter;
                 document.getElementById('youtube').textContent = translations.youtube;
                 document.getElementById('instagram').textContent = translations.instagram;
