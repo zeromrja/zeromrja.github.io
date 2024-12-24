@@ -10,9 +10,13 @@
             margin: 0;
             overflow: hidden;
             color: white; /* Cambia el color del texto a blanco */
+            background-color: rgba(0, 0, 0);
         }
         canvas {
             display: block;
+        }
+        disclaimer {
+            color: black;
         }
         .select-container {
             position: fixed;
@@ -39,6 +43,10 @@
             <option value="model3.gltf">The Black Hole</option>
             <option value="model4.gltf">Space Slime</option>
         </select>
+    </div>
+    <div class="disclaimer">
+        * Los colores de los modelos no se corresponden con los de las texturas originales.
+        * The colors of the models do not correspond to those of the original textures.
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
