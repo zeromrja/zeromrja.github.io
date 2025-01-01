@@ -47,21 +47,27 @@
             margin-bottom: 20px;
             line-height: 1.5;
         }
+        
+        a {
+            font-size: 18px;
+            margin-bottom: 10px;
+            line-height: 2.5;
+        }
 
         .link-container {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            gap: 20px;
             width: 80%;
-            max-width: 1200px;
+            max-width: 950px;
             margin: 0 auto;
+            align-items: center;
         }
 
         .link-container p {
             font-family: 'MinecraftFive', sans-serif;
             font-size: 1.5em;
             color: #fff;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             text-align: center;
             grid-column: span 3;
             background: rgba(0, 0, 0, 0.5);
@@ -69,17 +75,58 @@
 
         .link-container a {
             font-family: 'MinecraftFive', sans-serif;
-            font-size: 2em;
-            color: #fff;
             text-decoration: none;
-            background-color: #55acee;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-align: center;
+            background-color: lightgray;
+            font-size: 26px;
+            width: 300px;
+            height: 73px;
+            margin: 5px;
+            padding-bottom: 5px;
+            border: 3px solid black;
+            color: black;
+            background: 
+            linear-gradient(to top, gray 7px, transparent 1px),
+
+            linear-gradient(to top, white 10px, transparent 1px),
+
+            linear-gradient(to bottom, white 3px, transparent 1px),
+
+            linear-gradient(to left, white 3px, transparent 1px),
+
+            linear-gradient(to right, white 3px, whitesmoke 1px);
+        }
+        
+        .link-container a:hover {
+            background: 
+            linear-gradient(to top, gray 7px, transparent 1px),
+
+            linear-gradient(to top, white 10px, transparent 1px),
+
+            linear-gradient(to bottom, white 3px, transparent 1px),
+
+            linear-gradient(to left, white 3px, transparent 1px),
+
+            linear-gradient(to right, white 3px, lightgray 1px);
         }
 
-        .link-container a:hover {
-            background-color: #0077cc;
+        .link-container a:active {
+            width: 300px;
+            height: 63px;
+            margin: 5px;
+            padding-top: 5px;
+            border: none;
+            font-weight: normal;
+            font-style: normal;
+            border: 3px solid black;
+            transform: translateY(3px);
+            background: 
+            linear-gradient(to top, white 3px, transparent 1px),
+
+            linear-gradient(to bottom, white 3px, transparent 1px),
+
+            linear-gradient(to left, white 3px, transparent 1px),
+
+            linear-gradient(to right, white 3px, lightgray 1px);
         }
 
         .social-links {
