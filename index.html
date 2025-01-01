@@ -188,12 +188,20 @@
 
             .link-container {
                 grid-template-columns: 1fr;
+                align-items:end;
             }
 
             .link-container a {
-                font-size: 1.5em;
+                font-size: 26px;
                 padding: 8px 16px;
-                margin: 5px 0;
+                margin: 2px 0;
+                transform:translateX(9px);
+            }
+
+            .link-container a:active {
+            height: 62px;
+            margin: 9px;
+            transform:translateY(7px);
             }
 
             .social-links {
