@@ -63,10 +63,8 @@
             align-items: center;
         }
 
-        .link-name p {
+        .link-container p {
             font-family: 'MinecraftFive', sans-serif;
-            width: 1000px;
-            max-height: 950px;
             font-size: 1.5em;
             color: #fff;
             margin-bottom: 15px;
@@ -284,8 +282,9 @@
                 min-height:70px ;
             }
         }
+        
 
-        @media only screen and (max-width: 500px) {
+        @media only screen and (max-width: 400px) {
             .link-container a {
                 width: 200px;
                 height: 53px;
@@ -300,18 +299,12 @@
                 margin: 8px;
                 transform:translateY(7px);
             }
-            h1 {
-                position:initial;
-                font-size: 2em;
-                margin-bottom:1000px;
-                margin: 0px;
-            }
         }
     </style>
 </head>
 <body>
     <h1 id="welcome"></h1>
-    <div class="link-name">
+    <div class="link-container">
         <p id="skinPacks"></p>
     </div>
     <div class="link-container">
