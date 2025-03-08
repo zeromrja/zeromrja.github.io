@@ -21,6 +21,7 @@ body {
     min-height: 100vh; /* Establecer la altura mínima del cuerpo para ocupar toda la ventana del navegador */
     display: flex;
     flex-direction: column; /* Alinear el contenido en una columna */
+    justify-content: center;
 }
 
 header {
@@ -68,6 +69,10 @@ p {
     font-size: 25px;
     margin-bottom: 20px;
     line-height: 1.5;
+}
+
+.background{
+    z-index: 1
 }
 
 .social-links {
@@ -160,6 +165,7 @@ p {
     position: relative;
     width: 200px;
     height: 64px;
+    z-index: 2
     background: url('globe.png') no-repeat left center / contain;
     background-color: #000;
     border: 2px solid #00ff00;
@@ -176,10 +182,11 @@ select {
     flex: 1;
     height: 100%;
     padding: 10px;
+    margin-left: 55px;
     font-family: 'Minecraft Five', sans-serif;
     font-size: 1.5em;
-    color: transparent;
-    background: none;
+    color: white;
+    background: black;
     cursor: pointer;
     outline: none;
     border: none;
