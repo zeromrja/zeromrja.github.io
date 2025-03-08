@@ -71,6 +71,11 @@ p {
     line-height: 1.5;
 }
 
+
+div{
+    z-index: 2;
+}
+
 .social-links {
     position: fixed;
     bottom: 0;
@@ -211,6 +216,7 @@ select:focus {
     width: 24px;
     height: 24px;
     background: url('arrow.png') no-repeat center center / contain;
+    z-index: 2;
 }
 
 .youtube-embed-container{
