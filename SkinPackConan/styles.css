@@ -71,10 +71,6 @@ p {
     line-height: 1.5;
 }
 
-.background{
-    z-index: 1
-}
-
 .social-links {
     position: fixed;
     bottom: 0;
@@ -176,6 +172,7 @@ p {
 }
 
 select {
+    z-index: 1
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
