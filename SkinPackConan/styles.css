@@ -172,7 +172,7 @@ p {
 }
 
 select {
-    z-index: 1
+    z-index: 1;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
