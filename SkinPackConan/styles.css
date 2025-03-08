@@ -165,7 +165,7 @@ p {
     position: relative;
     width: 200px;
     height: 64px;
-    z-index: 2
+    z-index: 2;
     background: url('globe.png') no-repeat left center / contain;
     background-color: #000;
     border: 2px solid #00ff00;
