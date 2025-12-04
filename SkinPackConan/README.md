@@ -1,2 +1,2 @@
 # zeromrja.github.io
-Detective Conan Skin Pack
+Detective Conan Skin Pack.
